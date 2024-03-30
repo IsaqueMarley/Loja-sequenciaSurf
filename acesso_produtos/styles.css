@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* FORMATAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.navbar {
+    background-color: #1f2e36;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo img {
+    margin-top: 13px;
+    margin-left: -30px;
+    max-width: 130%;
+}
+
+.navbar .logout-form {
+    margin-left: 7px;
+}
+
+.navbar .logout-form input[type="submit"] {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.navbar .logout-form input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+/* BARRA DE NAVEGAÇÃO RESPONSIVA */
+@media screen and (max-width: 627px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar .logo img {
+        margin-left: -10px;
+        width: 90%;
+    }
+
+    .navbar .logout-form input[type="submit"] {
+        margin-right: -20px;
+    }
+}
+
+/* MODAL RESPONSIVO */
+@media screen and (max-width: 627px) {
+    table {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        display: table-cell;
+    }
+
+    th:nth-child(1), td:nth-child(1) { display: none; }
+    th:nth-child(2), td:nth-child(2) { display: none; }
+    th:nth-child(5), td:nth-child(5) { display: none; }
+    th:nth-child(6), td:nth-child(6) { display: none; }
+
+    #modalEditar .modal-content,
+    #modalNovoProduto .modal-content
+    {
+        width: 90%;
+        max-width: 100%;
+        height: 80vh;
+        margin: 10% auto; /* Ajuste o valor do margin conforme necessário */
+    }
+
+    #modalEditar label,
+    #modalEditar input,
+    #modalEditar textarea,
+    #modalEditar button,
+    #modalNovoProduto label,
+    #modalNovoProduto input,
+    #modalNovoProduto textarea,
+    #modalNovoProduto button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px; 
+    }
+
+    #modalEditar textarea#editDescricao,
+    #modalNovoProduto textarea#novoDescricao {
+        height: 100px; 
+    }
+
+    #modalEditar button,
+    #modalNovoProduto button {
+        margin-top: 10px; 
+        font-size: 16px; 
+    }
+
+    #modalConfirmacao .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        margin: 70% auto;
+        padding: 10px;
+        width: 80%;
+        height: 20%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    #modalConfirmacao .modal-content p {
+        margin-top: -8px;
+        text-align: center;
+        font-size: 12pt;
+    }
+
+    #modalConfirmacao .modal-content .botoes-confirm {
+        display: flex;
+    }
+
+    #modalConfirmacao button {
+        margin-top: 20px;
+        width: 110px;
+        font-size: 12pt;
+    }
+
+    body #modalConfirm.modal-content {
+        width: 80%;
+    }
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    margin: 20px;
+}
+
+h3 {
+    color: black;
+    font-size: 18pt;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f2e36;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.imagem-editar {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-input {
+    margin-bottom: 20px;
+}
+
+.modal-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.modal-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.modal-buttons button:hover {
+    background-color: #45a049;
+}
+
+/* BOTÃO PARA REMOVER OS PRODUTOS */
+.imagem-editar {
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+}
+
+.fas.fa-trash {
+    color: red;
+    font-size: 40px;
+    margin-left: 15px;
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+}
+
+/* BOTÕES FORA DO MODAL */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* MODAL DE CONFIRMAÇÃO PARA REMOVER O PRODUTO */
+#modalConfirm.modal-content {
+    width: 23%;
+}

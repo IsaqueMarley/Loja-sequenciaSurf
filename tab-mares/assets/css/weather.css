@@ -1,0 +1,34 @@
+.weather-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.forecast-day {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.forecast-day.current-day {
+    background-color: #ffecb3;
+    border: 2px solid #e0ac00; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.forecast-day:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 627px){
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+}
